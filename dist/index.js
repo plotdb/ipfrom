@@ -553,7 +553,7 @@ iptable = {
 var ipfrom;
 ipfrom = {
   taiwan: function(ip){
-    var vs, o, src, i, i$, to$, ref$, prefix, range;
+    var vs, o, src, i, i$, to$, j, ref$, prefix, range;
     ip == null && (ip = "");
     if (typeof ip !== 'string') {
       return false;
@@ -589,8 +589,8 @@ ipfrom = {
       return results$;
     }()).join('');
     for (i$ = 0, to$ = iptable.ipv6.length; i$ < to$; ++i$) {
-      i = i$;
-      ref$ = iptable.ipv6[i], prefix = ref$[0], range = ref$[1];
+      j = i$;
+      ref$ = iptable.ipv6[j], prefix = ref$[0], range = ref$[1];
       prefix = (fn$()).join('').substring(0, range - 1);
       if (src.startsWith(prefix)) {
         return true;
@@ -601,7 +601,7 @@ ipfrom = {
       var i$, to$, results$ = [];
       for (i$ = 0, to$ = prefix.length; i$ < to$; ++i$) {
         i = i$;
-        results$.push(parseInt(prefix, 16).toString(2).padStart(4, '0'));
+        results$.push(parseInt(prefix[i], 16).toString(2).padStart(4, '0'));
       }
       return results$;
     }
