@@ -1,6 +1,6 @@
 {
   "name": "@plotdb/ipfrom",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "for a quick structural ip address of taiwan.",
   "browser": "dist/index.min.js",
   "main": "dist/index.js",

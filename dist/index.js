@@ -567,11 +567,7 @@ ipfrom = {
         }
       }
       if (o = (iptable.ipv4.c[vs[0]] || {})[vs[1]]) {
-        if (o[0] <= +vs[2] && o[1] >= +vs[2]) {
-          true;
-        } else {
-          false;
-        }
+        return o[0] <= +vs[2] && o[1] >= +vs[2] ? true : false;
       }
       return false;
     }

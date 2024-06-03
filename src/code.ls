@@ -7,7 +7,7 @@ ipfrom =
       if o = iptable.ipv4.b[vs.0] =>
         if o.0 <= +vs.1 and o.1 >= +vs.1 => return true
       if o = (iptable.ipv4.c[vs.0] or {})[vs.1] =>
-        if o.0 <= +vs.2 and o.1 >= +vs.2 => true else false
+        return if o.0 <= +vs.2 and o.1 >= +vs.2 => true else false
       return false
     ip = ip.split(/:/).filter(->it).map(->it.padStart(4,'0')).join('').toLowerCase!
     src = [parseInt(ip[i],16).toString(2).padStart(4,'0') for i from 0 til ip.length].join('')
