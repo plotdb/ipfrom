@@ -1,6 +1,11 @@
 ipfrom = require '../dist/index.js'
 
-ips = <[
+
+ips = []
+
+# china ip
+ips ++= <[203.107.1.1]>
+ips ++= <[
   203.75.167.163
   192.168.1.108
   2001:b400:e294:8396:c59f:3389:fd86:a5ed
